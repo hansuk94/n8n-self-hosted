@@ -1,14 +1,13 @@
-name = "n8n-self-hosted"
-type = "webpack"
-account_id = "f85ade4b794b20bfd807d8efd2b03e8e"
-workers_dev = true
+name = "n8n-worker"
+main = "src/index.js"
 compatibility_date = "2024-03-08"
 
-[site]
-bucket = "./dist"
-entry-point = "workers-site"
-
 [build]
-command = "npm install && npm run build"
-upload.format = "service-worker"
-pages_build_output_dir = "dist" 
+command = "npm install"
+
+[[kv_namespaces]]
+binding = "N8N_KV"
+id = "n8n-storage"
+
+[vars]
+N8N_ENCRYPTION_KEY = "your-encryption-key-here" 

@@ -1,18 +1,21 @@
 {
-  "name": "n8n-self-hosted",
+  "name": "n8n-worker",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "start": "n8n start",
-    "build": "n8n build --copy-files",
-    "dev": "n8n dev"
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "n8n": "1.95.3",
-    "pg": "^8.11.3"
+    "n8n": "1.95.3"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
