@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "n8n start",
-    "build": "n8n build",
+    "build": "mkdir -p dist && cp -r node_modules/n8n/* dist/",
     "dev": "n8n dev"
   },
   "keywords": [],
