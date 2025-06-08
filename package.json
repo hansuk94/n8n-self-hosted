@@ -1,9 +1,9 @@
 {
-  "name": "n8n-railway",
+  "name": "n8n-self-hosted",
   "version": "1.0.0",
   "scripts": {
     "start": "n8n start",
-    "build": "echo 'No build step needed'",
+    "build": "n8n build --copy-files",
     "dev": "n8n dev"
   },
   "keywords": [],

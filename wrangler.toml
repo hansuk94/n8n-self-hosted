@@ -1,4 +1,4 @@
-name = "n8n-pages"
+name = "n8n-self-hosted"
 type = "webpack"
 account_id = "f85ade4b794b20bfd807d8efd2b03e8e"
 workers_dev = true
@@ -9,5 +9,6 @@ bucket = "./dist"
 entry-point = "workers-site"
 
 [build]
-command = "npm run build"
-upload.format = "service-worker" 
+command = "npm install && npm run build"
+upload.format = "service-worker"
+pages_build_output_dir = "dist" 
